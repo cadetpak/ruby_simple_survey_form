@@ -1,0 +1,16 @@
+<div id="results">
+   <!-- Flash message will show up here! -->
+  <% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+   <% end %>
+
+   <h4>Submitted Info</h4>
+   <!-- @result was the parameter created in 'result' method that loads this page -->
+   <p>Name: <%= @result["name"] %></p>
+   <p>Location: <%= @result["location"] %></p>
+   <p>Language: <%= @result["language"] %></p>
+   <p>Comment: <%= @result["comment"] %></p>
+   	
+  <!-- Button reads 'Go Back', the controller is 'surveys', the method is 'index' (which loads main page), method is get  -->
+   <%= button_to "Go Back", { :controller => "surveys", :action =>"index"}, :method => :get %>
+</div>

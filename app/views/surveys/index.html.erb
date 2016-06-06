@@ -1,0 +1,25 @@
+<div id='form'>
+  <form action="/surveys" method="post"> 
+  	<!-- NEED THIS AUTHENTICITY TOKEN for all forms! -->
+  	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  	Name:<input type="text" name="survey[name]"><br>
+  	Dojo Location:<select name="survey[location]">
+  	  <option value="San Jose">San Jose</option>
+  	  <option value="Seattle">Seattle</option>
+  	  <option value="Houston">Houston</option>
+  	  <option value="Chicago">Chicago</option>
+  	</select><br>
+  	Favorite Language:<select name="survey[language]">
+  	  <option value="Ruby">Ruby</option>
+  	  <option value="Python">Python</option>
+  	  <option value="PHP">PHP</option>
+  	  <option value="MEAN">MEAN</option>
+  	  <option value="IOS">IOS</option>
+  	</select><br>
+  	Comment:<input type="text" name="survey[comment]"><br>
+  	<input type="submit" value="Submit">
+  </form>
+<div> 
+
+
+  	
